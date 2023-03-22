@@ -22,7 +22,7 @@
     #restartGame {
         position: absolute;
         transform: translateY(45px);
-        margin: 0px 0px 0px -140px;
+        margin: 0px 0px 0px -100px;
     }
 
     #statsDiv {
