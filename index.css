@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+#header {
+    width: auto;
+    padding: 21px;
+    box-shadow: 0px 0px 8px black;
+    background-color: chocolate;
+    color: white;
+    text-align: center;
+    z-index: 9999;
+}
+@media (max-width: 580px) {
+    #header {
+        height: 115px;
+    }
+
+    #restartGame {
+        position: absolute;
+        transform: translateY(45px);
+        margin: 0px 0px 0px -140px;
+    }
+
+    #statsDiv {
+        position: absolute;
+        transform: translateY(45px);
+        margin: 0px 0px 0px -7px;
+    }
+}
+
+#header h2 {
+    display: inline;
+}
+
+#restartGame {
+    display: inline-flex;
+    float: right;
+    background-color: white;
+    color: chocolate;
+    padding: 8px;
+    font-weight: bold;
+    margin-top: -4px;
+    transition: 0.2s;
+}
+
+#restartGame:hover,
+#statsDiv:hover {
+    cursor: pointer;
+    background-color: chocolate;
+    color: white;
+    border: 2px solid white;
+}
+#restartGame:active,
+#statsDiv:active {
+    opacity: 0.5;
+}
+
+#statsDiv {
+    display: inline-flex;
+    float: left;
+    background-color: white;
+    color: chocolate;
+    padding: 8px;
+    margin-top: -4px;
+    font-weight: bold;
+}
+
+#mainBody {
+    margin: 1.5%;
+    text-align: center;
+}
+
+#mainBody div {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: wheat;
+    padding-top: 17px;
+    margin: 1%;
+    width: 55px;
+    height: 55px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.1s;
+    box-shadow: 0px 0px 4px tan;
+    animation-name: slidedown;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes slidedown {
+    0% {transform: translateY(-30px); opacity: 0.3;}
+}
+
+#mainBody div:hover {
+    background-color: chocolate;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;    
+}
