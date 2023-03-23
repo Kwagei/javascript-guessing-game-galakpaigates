@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (lives < 1) {
                 statsDiv.textContent = "GAME OVER!"
                 
-                statsDiv.style.backgroundColor = "white"; statsDiv.style.color = "crimson"; statsDiv.style.border = "2px solid crimson";
+                statsDiv.style.backgroundColor = "white"; statsDiv.style.color = "crimson";
 
                 const allButtons = mainBody.querySelectorAll('button')
 
