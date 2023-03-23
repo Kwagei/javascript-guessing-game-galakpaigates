@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let numbers = []
 
     restartGame.addEventListener('click', function generateAppendNumbers() {
-        new Audio("./click.mp3").play()
+        new Audio("./sounds/click.mp3").play()
 
         randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const userChoice = event.target;
 
         if (userChoice.offsetWidth < 60) {
-            new Audio("./click.mp3").play()
+            new Audio("./sounds/click.mp3").play()
         }
 
         if (userChoice.offsetWidth > 60) {

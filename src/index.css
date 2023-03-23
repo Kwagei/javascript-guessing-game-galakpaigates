@@ -48,13 +48,13 @@
     #restartGame {
         position: absolute;
         transform: translateY(45px);
-        margin: 0px 0px 0px -108px;
+        margin: 0px 0px 0px -90px;
     }
 
     #statsDiv {
         position: absolute;
         transform: translateY(45px);
-        margin: 0px 0px 0px 7px;
+        margin: 0px 0px 0px -21px;
     }
 
     #mainBody h1 {
@@ -110,13 +110,12 @@
     display: inline-flex;
     flex-direction: column;
     background-color: wheat;
-    padding-top: 17px;
     margin: 1%;
     width: 55px;
     height: 55px;
     font-weight: bold;
     border-radius: 50%;
-    text-align: center;
+    justify-content: center;
     transition: 0s;
     box-shadow: 0px 0px 4px tan;
     animation-name: slidedown;
@@ -124,7 +123,7 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     border: none;
-    font-size: 17px;  
+    font-size: 17px;
 }
 @keyframes slidedown {
     0% {transform: translateY(-800px); opacity: 0.3; z-index: -1;}
