@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif
+    font-family: sans-serif;
+    outline: none;
+}
+
+*:hover {
+    cursor: default;
 }
 
 #header {
@@ -12,8 +17,29 @@
     background-color: chocolate;
     color: white;
     text-align: center;
+    position: sticky;
     z-index: 9999;
 }
+
+#mainBody h1 {
+    color: chocolate;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+#correctP {
+    margin-top: 100px;
+}
+
+#mainBody p {
+    color: chocolate;
+    font-weight: bold;
+    font-size: 22px;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 580px) {
     #header {
         height: 115px;
@@ -22,13 +48,18 @@
     #restartGame {
         position: absolute;
         transform: translateY(45px);
-        margin: 0px 0px 0px -100px;
+        margin: 0px 0px 0px -108px;
     }
 
     #statsDiv {
         position: absolute;
         transform: translateY(45px);
-        margin: 0px 0px 0px -7px;
+        margin: 0px 0px 0px 7px;
+    }
+
+    #mainBody h1 {
+        font-size: 28px;
+        margin: 10px;
     }
 }
 
@@ -65,7 +96,8 @@
     background-color: white;
     color: chocolate;
     padding: 8px;
-    margin-top: -4px;
+    margin-left: -10px;
+    margin-top: -5px;
     font-weight: bold;
 }
 
@@ -74,7 +106,7 @@
     text-align: center;
 }
 
-#mainBody div {
+#mainBody button {
     display: inline-flex;
     flex-direction: column;
     background-color: wheat;
@@ -85,20 +117,22 @@
     font-weight: bold;
     border-radius: 50%;
     text-align: center;
-    transition: 0.1s;
+    transition: 0s;
     box-shadow: 0px 0px 4px tan;
     animation-name: slidedown;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
+    border: none;
+    font-size: 17px;  
 }
 @keyframes slidedown {
-    0% {transform: translateY(-30px); opacity: 0.3;}
+    0% {transform: translateY(-800px); opacity: 0.3; z-index: -1;}
 }
 
-#mainBody div:hover {
+#mainBody button:hover {
     background-color: chocolate;
     cursor: pointer;
     color: white;
-    font-size: 20px;    
+    font-size: 17.5px;    
 }
