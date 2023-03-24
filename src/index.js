@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var randomNumber = Math.floor(Math.random() * 100) + 1;
 
-    var lives = 10
+    var lives = 7
 
     const mainBody = document.getElementById('mainBody')
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         randomNumber = Math.floor(Math.random() * 100) + 1;
 
-        lives = 10
+        lives = 7
 
         statsDiv.innerText = `Lives = ${lives}`
         statsDiv.style.backgroundColor = "white"; statsDiv.style.color = "chocolate"; statsDiv.style.border = "none"
