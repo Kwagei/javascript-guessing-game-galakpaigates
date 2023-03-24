@@ -27,6 +27,12 @@
     margin-top: 30px;
 }
 
+#mainBody h4 {
+    color: chocolate;
+    font-size: 21px;
+    margin-top: 12px;
+}
+
 #correctP {
     margin-top: 100px;
 }
