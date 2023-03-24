@@ -61,11 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Targeting the Particular Element that was clicked on the Page and assigning a variable to it.
         const userChoice = event.target;
-
-        if (userChoice.offsetWidth < 60) {
-            new Audio("./sounds/click.mp3").play()
-        }
-
+        
         if (userChoice.offsetWidth > 60) {
             // Added Specificity to the type of element the user should click on. Only if is it one of the Divs created by the 'for' loop inside the randomCapitalsDiv
         }
@@ -91,6 +87,19 @@ document.addEventListener('DOMContentLoaded', function() {
             statsDiv.textContent = `Lives = ${lives-=1}`
 
             userChoice.disabled = true;
+
+            hint() 
+            function hint() {
+                const userInt = parseInt(userChoice.textContent)
+            
+                if (userInt > randomNumber) {
+                    new Audio("./sounds/decreaseOfficial.mp3").play()
+                }
+        
+                if (userInt < randomNumber) {
+                    new Audio("./sounds/increaseOfficial.mp3").play()
+                }
+            }
 
             if (lives < 1) {
                 statsDiv.textContent = "GAME OVER!"

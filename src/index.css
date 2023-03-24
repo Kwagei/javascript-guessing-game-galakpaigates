@@ -124,6 +124,7 @@
     animation-timing-function: ease-out;
     border: none;
     font-size: 17px;
+    color: black;
 }
 @keyframes slidedown {
     0% {transform: translateY(-800px); opacity: 0.3; z-index: -1;}
