@@ -25,6 +25,11 @@
     color: chocolate;
     font-size: 40px;
     margin-top: 30px;
+    text-decoration: underline;
+}
+#mainBody h1:hover {
+    cursor: pointer;
+    color: blue;
 }
 
 #mainBody h4 {
@@ -67,6 +72,10 @@
         font-size: 28px;
         margin: 10px;
     }
+
+    #mainBody h4 {
+        margin: 7px;
+    }
 }
 
 #header h2 {
@@ -90,7 +99,7 @@
     color: white;
     border: 2px solid white;
 }
-#restartGame:active,
+.restartGame:active,
 #statsDiv:active {
     opacity: 0.5;
 }

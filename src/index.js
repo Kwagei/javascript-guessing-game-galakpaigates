@@ -4,13 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var lives = 10
 
+    if (screen.width > 500) {
+        lives = 8
+    }
+
     const mainBody = document.getElementById('mainBody')
 
     const restartGame = document.getElementById('restartGame');
 
     const statsDiv = document.getElementById('statsDiv');
 
-    statsDiv.addEventListener('click', () => {})
+    const clickToPlay = document.getElementById('clickToPlay');
+
+    statsDiv.addEventListener('click', () => {});
 
     statsDiv.textContent = `----- | -----`
 
@@ -22,6 +28,55 @@ document.addEventListener('DOMContentLoaded', function() {
         randomNumber = Math.floor(Math.random() * 100) + 1;
 
         lives = 10
+
+        if (screen.width > 500) {
+            lives = 8
+        }
+
+        statsDiv.innerText = `Lives = ${lives}`
+        statsDiv.style.backgroundColor = "white"; statsDiv.style.color = "chocolate"; statsDiv.style.border = "none"
+
+        mainBody.innerHTML = '';
+
+        numbers.length = 0;
+
+        appendNumbers()
+
+        function appendNumbers() {
+
+            numbers.splice(0, numbers.length)
+
+            for (let i = 1; i <= 100; i++) {
+                numbers.push(i);
+            }
+              
+            for (let i = 100 - 1; i > 0; i--) {
+                const currentNumber = Math.floor(Math.random() * (i + 1));
+                [numbers[i], numbers[currentNumber]] = [numbers[currentNumber], numbers[i]];
+            }
+
+            mainBody.innerHTML = "";
+    
+            for (let i = 0; i < numbers.length; i++) {
+                const numberButton = document.createElement('button');
+        
+                numberButton.textContent = numbers[i]
+                
+                mainBody.appendChild(numberButton)
+            }
+        }
+    })
+
+    clickToPlay.addEventListener('click', () => {
+        new Audio("./sounds/click.mp3").play()
+
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        lives = 11
+
+        if (screen.width > 500) {
+            lives = 9
+        }
 
         statsDiv.innerText = `Lives = ${lives}`
         statsDiv.style.backgroundColor = "white"; statsDiv.style.color = "chocolate"; statsDiv.style.border = "none"
