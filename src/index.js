@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const numLivesParagraph = document.getElementById('numLivesParagraph');
+    const alertParagraph = document.getElementById('alertParagraph');
 
     var randomNumber = Math.floor(Math.random() * 100) + 1;
 
     var lives = 10
 
     if (screen.width > 500) {
-        lives = 8
+        lives = 8;
+
+        numLivesParagraph.innerText =  `You have ${lives} lives!`;
+    }
+
+    else {
+        numLivesParagraph.innerText = `You have ${lives} lives!`;
     }
 
     const mainBody = document.getElementById('mainBody')
@@ -148,11 +156,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 const userInt = parseInt(userChoice.textContent)
             
                 if (userInt > randomNumber) {
-                    new Audio("./sounds/decreaseOfficial.mp3").play()
+
+                    new Audio("./sounds/click.mp3").play()
+
+                    alertParagraph.innerHTML = `<h3>Go Lower!</h3>`;
+                    alertParagraph.style.display = "block";
+
+                    setTimeout(() => {
+                        alertParagraph.style.display = "none";
+                    }, 1000);
                 }
         
                 if (userInt < randomNumber) {
-                    new Audio("./sounds/increaseOfficial.mp3").play()
+
+                    new Audio("./sounds/click.mp3").play()
+
+                    alertParagraph.innerHTML = `<h3>Go Higher!</h3>`;
+                    alertParagraph.style.display = "block";
+
+                    setTimeout(() => {
+                        alertParagraph.style.display = "none";
+                    }, 1000);
                 }
             }
 

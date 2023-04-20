@@ -21,10 +21,39 @@
     z-index: 9999;
 }
 
+#alertParagraph {
+    top: 40vh;
+    left: 25vw;
+    right: 25vw;
+    bottom: 40vh;
+    background-color: chocolate;
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    max-height: 55px;
+    outline: 5px solid crimson;
+    border-radius: 7px;
+    display: none;
+}
+
+#clickToPlayButton {
+    width: 40vw !important;
+    min-width: 250px !important;
+    height: 85px !important;
+    border-radius: 12px !important;
+    animation: none !important;
+}
+
+#clickToPlayButton:hover {
+    background-color: white !important;
+}
+
 #mainBody h1 {
     color: chocolate;
     font-size: 40px;
-    margin-top: 30px;
     text-decoration: underline;
 }
 #mainBody h1:hover {
