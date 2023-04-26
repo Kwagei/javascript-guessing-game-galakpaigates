@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+}
+
+*:hover {
+    cursor: default;
+}
+
+#header {
+    width: auto;
+    padding: 21px;
+    box-shadow: 0px 0px 8px black;
+    background-color: chocolate;
+    color: white;
+    text-align: center;
+    position: sticky;
+    z-index: 9999;
+}
+
+#alertParagraph {
+    top: 40vh;
+    left: 25vw;
+    right: 25vw;
+    bottom: 40vh;
+    background-color: chocolate;
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    max-height: 55px;
+    outline: 5px solid crimson;
+    border-radius: 7px;
+    display: none;
+}
+
+#clickToPlayButton {
+    width: 40vw !important;
+    min-width: 250px !important;
+    height: 85px !important;
+    border-radius: 12px !important;
+    animation: none !important;
+}
+
+#clickToPlayButton:hover {
+    background-color: white !important;
+}
+
+#mainBody h1 {
+    color: chocolate;
+    font-size: 40px;
+    text-decoration: underline;
+}
+#mainBody h1:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+#mainBody h4 {
+    color: chocolate;
+    font-size: 21px;
+    margin-top: 12px;
+}
+
+#correctP {
+    margin-top: 100px;
+}
+
+#mainBody p {
+    color: chocolate;
+    font-weight: bold;
+    font-size: 22px;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 580px) {
+    #header {
+        height: 115px;
+    }
+
+    #restartGame {
+        position: absolute;
+        transform: translateY(45px);
+        margin: 0px 0px 0px -90px;
+    }
+
+    #statsDiv {
+        position: absolute;
+        transform: translateY(45px);
+        margin: 0px 0px 0px -21px;
+    }
+
+    #mainBody h1 {
+        font-size: 28px;
+        margin: 10px;
+    }
+
+    #mainBody h4 {
+        margin: 7px;
+    }
+}
+
+#header h2 {
+    display: inline;
+}
+
+#restartGame {
+    display: inline-flex;
+    float: right;
+    background-color: white;
+    color: chocolate;
+    padding: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#restartGame:hover,
+#statsDiv:hover {
+    cursor: pointer;
+    background-color: chocolate;
+    color: white;
+    border: 2px solid white;
+}
+.restartGame:active,
+#statsDiv:active {
+    opacity: 0.5;
+}
+
+#statsDiv {
+    display: inline-flex;
+    float: left;
+    background-color: white;
+    color: chocolate;
+    padding: 8px;
+    margin-left: -10px;
+    font-weight: bold;
+}
+
+#mainBody {
+    margin: 1.5%;
+    text-align: center;
+}
+
+#mainBody button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: wheat;
+    margin: 1%;
+    width: 55px;
+    height: 55px;
+    font-weight: bold;
+    border-radius: 50%;
+    transition: 0s;
+    box-shadow: 0px 0px 4px tan;
+    animation-name: slidedown;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    border: none;
+    font-size: 17px;
+    color: black;
+}
+@keyframes slidedown {
+    0% {transform: translateY(-800px); opacity: 0.3; z-index: -1;}
+}
+
+#mainBody button:hover {
+    background-color: chocolate;
+    cursor: pointer;
+    color: white;
+    font-size: 17.5px;    
+}
