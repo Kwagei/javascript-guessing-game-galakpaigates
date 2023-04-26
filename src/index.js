@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const numLivesParagraph = document.getElementById('numLivesParagraph');
-    const alertParagraph = document.getElementById('alertParagraph');
 
     var randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -156,27 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const userInt = parseInt(userChoice.textContent)
             
                 if (userInt > randomNumber) {
-
-                    new Audio("./sounds/click.mp3").play()
-
-                    alertParagraph.innerHTML = `<h3>Go Lower!</h3>`;
-                    alertParagraph.style.display = "block";
-
-                    setTimeout(() => {
-                        alertParagraph.style.display = "none";
-                    }, 1000);
+                    new Audio("./sounds/decreaseOfficial.mp3").play()
                 }
         
                 if (userInt < randomNumber) {
-
-                    new Audio("./sounds/click.mp3").play()
-
-                    alertParagraph.innerHTML = `<h3>Go Higher!</h3>`;
-                    alertParagraph.style.display = "block";
-
-                    setTimeout(() => {
-                        alertParagraph.style.display = "none";
-                    }, 1000);
+                    new Audio("./sounds/increaseOfficial.mp3").play()
                 }
             }
 
